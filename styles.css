@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
+
+body {
+    background-color: #6a2470;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.montserrat-bold {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; /* Assuming a bold weight is desired for buttons */
+  }
+  
+
+.container {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.title-container {
+    color: #dbdbdb;
+    font-size: 7rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 50px; /* Added space below the title */
+}
+
+.title {
+    position: relative; 
+    font-weight: 600;
+    display: inline-block;
+    background: -webkit-linear-gradient(gray, white); /* For Chrome/Safari */
+    background: linear-gradient(gray, white); /* Standard syntax */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback if 'background-clip' is not supported */
+}
+
+
+.subtitle {
+    font-size: 4rem;
+    font-weight: 400;
+    background: -webkit-linear-gradient(gray, white); /* For Chrome/Safari */
+    background: linear-gradient(gray, white); /* Standard syntax */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback */
+    /* Removed positioning and added alignment */
+    text-align: right; 
+    margin-top: -30px; /* Ensure it visually separates from 'SafeDeal' */
+}
+
+
+
+.content-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 90px;
+}
+
+.illustration img {
+    max-width: 500px;
+    height: auto;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.button-box {
+    margin: 30px;
+}
+
+.button {
+    background-color: #d198d6;
+    color: #341133;
+    border: 3px solid #d198d6;
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 1.8rem;
+    transition: 0.3s;
+    font-family: "Montserrat", sans-serif; /* Use Signika Negative for buttons */
+    font-weight: 390; /* Specifies a bold weight for the font */
+}
+
+.button:hover {
+    background-color: #341133;
+    color: #d198d6;
+}
