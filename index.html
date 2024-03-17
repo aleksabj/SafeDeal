@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
-    <title>SafeDeal Connect</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset = "UTF-8">
+    <title>SafeDeal</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="title-container">
-    <div class="title">SafeDeal</div>
-    <div class="subtitle">connect</div>
-</div>
+    <div class="bg">
+        <!-- <nav class="navigation">
+            <ul>
+                <li><a href="#contacts" class="nav-button">Contacts</a></li>
+                <li><a href="#learn-more" class="nav-button">Learn More</a></li>
+                <li><a href="#about-us" class="nav-button">About Us</a></li>
+                <li><a href="#our-app" class="nav-button">Our App</a></li>
+            </ul>
+        </nav> -->
 
         <div class="content-area">
-            <div class="illustration">
-                <img src="firstimage.png" alt="Illustration" class="illustration-image">
-            </div>
             <div class="button-container">
                 <div class="button-box">
-                    <button class="button">about us</button>
+                    <button class="button" onclick="location.href='#about-us'">About Us</button>
                 </div>
                 <div class="button-box">
-                    <button class="button">our app</button>
-                </div>
-                <div class="button-box">
-                    <button class="button">contacts</button>
+                    <button class="button" onclick="location.href='#our-app'">Our App</button>
                 </div>
             </div>
         </div>
+
+        <!-- New container for the Contacts button aligned to the left -->
+        <div class="contacts-container">
+            <div class="button-box">
+                <button class="button" onclick="location.href='#contacts'">Contacts</button>
+            </div>
+        </div>
+
+        <div class="image-slider">
+            <button class="slide-arrow left-arrow">❮</button>
+            <div class="image-holder">
+                <img src="images/image1.png" alt="Image 1">
+                <img src="images/image2.png" alt="Image 2">
+                <img src="images/image3.png" alt="Image 3">
+            </div>
+            <button class="slide-arrow right-arrow">❯</button>
+        </div>
+        <script src="js/image-slider.js"></script>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
