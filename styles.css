@@ -1,4 +1,4 @@
-body {
+body, html {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -16,13 +16,13 @@ body {
 .top-right-buttons {
     position: absolute;
     top: 10px;
-    right: 10px; /* Corrected to ensure it's within the viewable area */
+    right: 10px; 
     text-align: right;
 }
 
 .top-right-buttons li {
     display: block;
-    margin-bottom: 10px; /* Spacing between buttons */
+    margin-bottom: 10px; 
 }
 
 .navigation {
@@ -53,61 +53,67 @@ body {
 }
 
 .nav-button:hover {
-    background-color: #666;
+    background-color: #668;
 }
 
 .image-slider {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 44px; 
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.image-holder img {
-    width: 100%;
-    display: flex; /* Flex to align centrally */
-    justify-content: center; /* Center the image*/
-    overflow: hidden; /* Hides the non-active images */
-}
-.image-holder img {
-    max-width: 100%; /* Adjust if you want the image to be smaller */
-    display: none; /* Hide all images initially */
-    transition: opacity 0.5s ease; /* Optional: adds a fade effect when changing images */
 }
 
-/* Make only the first image visible by default */
+.image-holder {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+.image-holder img {
+    display: none; 
+    height: auto; 
+    max-width: 22%; 
+    border-radius: 30px; 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
 .image-holder img.active {
-    display: block; /* Show only the active image */
-    max-width: 50%; /* Adjust this value based on desired size */
-    margin: auto; /* Centering the image */
+    display: block; 
+    filter: blur(2px); 
+    transition: filter 0.3s ease; /
+
 }
 
 
 .slide-arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 30%; 
     cursor: pointer;
-    font-size: 24px;
-    background: none;
+    font-size: 30px; 
+    color: black; 
+    background-color: #669; 
     border: none;
-    color: white;
-    z-index: 2; /* Ensure arrows are above the image */
+    padding: 10px; 
+    border-radius: 50%; 
 }
 
 .left-arrow {
-    left: 5%; /* Adjust based on the visibility and design requirements */
+    left: 35%; 
+    transform: translateY(-50%);
 }
 
 .right-arrow {
-    right: 5%; /* Adjust based on the visibility and design requirements */
+    right: 35%; 
+    transform: translateY(-50%);
 }
 
 
 
 .content-area {
     position: absolute;
-    right: 3px; /* Adjusted to posit properly within the viewable area */
+    right: 3px; 
     bottom: 45px;
 }
 
@@ -126,8 +132,8 @@ body {
     text-decoration: none;
     color: white;
     background-color: #413462;
-    padding: 10px 15px; /* Adjusted padding for less empty area around the text */
-    border-radius: 50px; /* Adjust the border-radius if you want less/more curvature */
+    padding: 10px 15px; 
+    border-radius: 50px; 
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -142,6 +148,16 @@ body {
 
 .contacts-container {
     position: absolute;
-    left: 10px; /* Corrected to make sure it is within visibility */
+    left: 10px; 
     bottom: 26px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-slider {
+        bottom: 20px; 
+    }
+    .image-holder img.active {
+        width: 50%; 
+    }
 }
