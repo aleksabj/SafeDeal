@@ -121,8 +121,18 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
+ 
 }
+
+.about-us-button {
+    margin-bottom: 80px; /* Increase the bottom margin to push "Our App" lower */
+ }
+ 
+ /* Assuming .button-box might wrap individual buttons, we increase the margin there if needed */
+ .button-box:first-child {
+    margin-bottom: 50px; /* This assumes the "About Us" is the first button */
+ }
+
 
 .button-box {
     margin: 17px 0;
@@ -146,10 +156,20 @@ body, html {
     background-color: #669;
 }
 
+.button-container, .contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1000; /* Ensures the buttons are above other content */
+}
+
+/* Ensures contacts area does not overlap button area and remains accessible */
 .contacts-container {
-    position: absolute;
-    left: 10px; 
-    bottom: 26px;
+    position: fixed;
+    left: 10px;
+    bottom: 3px;
+    z-index: 1000; /* Adjust as needed to bring to the front */
 }
 
 /* Responsive adjustments */
