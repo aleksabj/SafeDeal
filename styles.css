@@ -19,7 +19,7 @@ body, html {
 }
 
 .top-right-buttons {
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px; 
     text-align: right;
@@ -58,7 +58,7 @@ body, html {
 }
 
 .nav-button:hover {
-    background-color: #668;
+    background-color: #5a498f;
 }
 
 .image-slider {
@@ -96,7 +96,7 @@ body, html {
     cursor: pointer;
     font-size: 30px; 
     color: black; 
-    background-color: #669; 
+    background-color: #5a498f; 
     border: none;
     padding: 10px; 
     border-radius: 50%; 
@@ -165,7 +165,7 @@ body, html {
 .contacts-container {
     position: absolute;
     left: 10px;
-    bottom: 3px;
+    bottom: -6px;
     z-index: 1000; 
 }
 
@@ -246,7 +246,7 @@ body, html {
 }
 
 .info-box-button:hover {
-    background-color: #846ec6; 
+    background-color: #5a498f; 
     color: #ffffcc; 
 }
 
@@ -346,9 +346,10 @@ body, html {
     transition: all 0.3s ease;
 
 }
-.info-box-button:hover {
-    background-color: #846ec6; 
+.info-box-button2:hover {
+    background-color: #5a498f; 
     color: #ffffcc; 
+
 }
 
 .outer-box {
