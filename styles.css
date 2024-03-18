@@ -140,7 +140,7 @@ body, html {
 .button {
     text-decoration: none;
     color: white;
-    background-color: #413462;
+    background-color: transparent;
     padding: 10px 15px; 
     border-radius: 50px; 
     border: none;
@@ -164,7 +164,7 @@ body, html {
 }
 
 .contacts-container {
-    position: fixed;
+    position: absolute;
     left: 10px;
     bottom: 3px;
     z-index: 1000; 
@@ -176,5 +176,39 @@ body, html {
     }
     .image-holder img.active {
         width: 50%; 
+    }
+}
+
+
+.info-boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 20px; /* Adjusts the space between the boxes */
+    padding: 20px;
+    margin-top: 20px; /* Space from the top content, adjust as needed */
+}
+
+.info-box {
+    flex-basis: 30%; /* Adjust based on preference and responsiveness */
+    padding: 20px; 
+    background-color: #ffffff; /* Placeholder, replace with actual color */
+    color: #000000; /* Placeholder, replace with actual text color */
+    border: 2px solid #cccccc; /* Placeholder, adjust color and thickness */
+    border-radius: 10px; /* Rounded corners, adjust as needed */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
+    font-family: 'Sofia Sans', sans-serif; /* Placeholder, replace with actual font */
+    text-align: center; /* Centers the text within the box */
+    transition: transform 0.3s ease; 
+}
+
+.info-box:hover {
+    transform: translateY(-5px); /* Subtle hover effect, optional */
+}
+
+@media (max-width: 768px) {
+    .info-box {
+        flex-basis: 100%; /* Stacks the boxes on smaller screens */
     }
 }
