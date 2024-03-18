@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;700&family=Sofia+Sans+Extra+Condensed:wght@400;700&display=swap');
 body, html {
     height: 100%;
     margin: 0;
@@ -202,9 +203,9 @@ body, html {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: stretch;
-    gap: 20px; /* Adjusts the space between the boxes */
-    padding: 20px;
-    margin-top: 20px; /* Space from the top content, adjust as needed */
+    gap: 8px; /* Adjusts the space between the boxes */
+    padding: 10px;
+    margin-top: 10px; /* Space from the top content, adjust as needed */
 }
 
 .info-box {
@@ -213,11 +214,15 @@ body, html {
     background-color: #ede9f8; /* Placeholder, replace with actual color */
     color: #917fc1; /* Placeholder, replace with actual text color */
     border: 10px solid #917fc1; /* Placeholder, adjust color and thickness */
-    border-radius: 10px; /* Rounded corners, adjust as needed */
+    border-radius: 50px; /* Rounded corners, adjust as needed */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
     font-family: 'Sofia Sans', sans-serif; /* Placeholder, replace with actual font */
     text-align: center; /* Centers the text within the box */
     transition: transform 0.3s ease; 
+}
+.info-box h2 { /* Adjust based on which heading level you're using for the title */
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 40px;
 }
 
 .info-box:hover {
