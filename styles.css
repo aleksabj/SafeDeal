@@ -6,6 +6,9 @@ body, html {
     background-color: #ded5f4; 
 
 }
+html {
+    scroll-behavior: smooth;
+}
 
 .bg {
     background: url('images/front-page.jpg') no-repeat center center fixed; 
@@ -117,7 +120,7 @@ body, html {
 .content-area {
     position: absolute;
     right: 3px; 
-    bottom: 45px;
+    bottom: 70px;
 }
 
 .button-container {
@@ -132,12 +135,12 @@ body, html {
  }
  
  .button-box:first-child {
-    margin-bottom: 50px; 
+    margin-bottom: 60px; 
  }
 
 
 .button-box {
-    margin: 17px 0;
+    margin: 1px 0;
 }
 
 .button {
@@ -219,15 +222,44 @@ body, html {
     font-family: 'Sofia Sans', sans-serif; /* Placeholder, replace with actual font */
     text-align: center; /* Centers the text within the box */
     transition: transform 0.3s ease; 
+
 }
 .info-box h2 { /* Adjust based on which heading level you're using for the title */
     font-family: 'Sofia Sans Extra Condensed', sans-serif;
-    font-size: 40px;
+    font-size: 70px;
 }
 
 .info-box:hover {
     transform: translateY(-5px); /* Subtle hover effect, optional */
 }
+
+
+/* Additional styles for individual info box buttons */
+.info-box-button {
+    background-color: #917fc1; /* Example background color */
+    color: white; /* Text color */
+    border: 8px solid #ede9f8; /* Border properties */
+    padding: 10px 1px; /* Padding properties */
+    margin-top: 90px; /* Spacing from other elements */
+    display: inline-block; /* Change from text link to block element */
+    text-align: center; /* Ensures text is centered */
+    border-radius: 50px; /* Rounded corners */
+    font-family: 'Sofia Sans', sans-serif; /* Placeholder, replace with actual font */
+    font-size: 25px;
+    text-align: center; /* Centers the text within the box */
+    transition: transform 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 100%; /* Adjusts the width to fit within the box */
+    margin-top: 140px; 
+}
+
+.info-box-button:hover {
+    background-color: #846ec6; /* Darker shade on hover */
+    color: #ffffcc; /* Lighter text color on hover */
+}
+
 
 @media (max-width: 768px) {
     .info-box {
