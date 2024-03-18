@@ -4,9 +4,8 @@ body, html {
     margin: 0;
     padding: 0;
     background-color: #ded5f4; 
-
-}
-html {
+    font-family: 'Sofia Sans', sans-serif;
+    color: #3a2e73;
     scroll-behavior: smooth;
 }
 
@@ -91,8 +90,6 @@ html {
     transition: filter 0.3s ease; /
 
 }
-
-
 .slide-arrow {
     position: absolute;
     top: 30%; 
@@ -104,18 +101,14 @@ html {
     padding: 10px; 
     border-radius: 50%; 
 }
-
 .left-arrow {
     left: 35%; 
     transform: translateY(-50%);
 }
-
 .right-arrow {
     right: 35%; 
     transform: translateY(-50%);
 }
-
-
 
 .content-area {
     position: absolute;
@@ -186,17 +179,16 @@ html {
 }
 
 .ceiling-image {
-    width: 100%; /* Ensures the image covers the full viewport width */
-    height: auto; /* Maintains the aspect ratio of the image */
-    display: block; /* Removes any default inline spacing */
-    margin: 20px 0; /* Adds some space above and below the image */
+    width: 100%;
+    height: auto; 
+    display: block;
+    margin: 20px 0; 
 }
 
-/* Optional: Additional styling for the small image inside the third info box, if needed */
 .small-image {
-    width: 100%; /* Makes the small image fit to the container width */
-    height: auto; /* Keeps the image's aspect ratio intact */
-    margin-top: 20px; /* Adjust space between text and image as needed */
+    width: 100%; 
+    height: auto; 
+    margin-top: 20px; 
 }
 
 
@@ -206,63 +198,184 @@ html {
     justify-content: center;
     flex-wrap: nowrap;
     align-items: stretch;
-    gap: 8px; /* Adjusts the space between the boxes */
+    gap: 8px; 
     padding: 10px;
-    margin-top: 10px; /* Space from the top content, adjust as needed */
+    margin-top: 10px; 
+    line-height: 1.6; 
+    margin-bottom: 1em;
 }
 
 .info-box {
-    flex-basis: 30%; /* Adjust based on preference and responsiveness */
+    flex-basis: 30%; 
     padding: 20px; 
-    background-color: #ede9f8; /* Placeholder, replace with actual color */
-    color: #917fc1; /* Placeholder, replace with actual text color */
-    border: 10px solid #917fc1; /* Placeholder, adjust color and thickness */
-    border-radius: 50px; /* Rounded corners, adjust as needed */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
-    font-family: 'Sofia Sans', sans-serif; /* Placeholder, replace with actual font */
-    text-align: center; /* Centers the text within the box */
+    background-color: #ede9f8; 
+    color: #917fc1; 
+    border: 10px solid #3a2e73; 
+    border-radius: 50px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    font-family: 'Sofia Sans', sans-serif; 
+    text-align: center; 
     transition: transform 0.3s ease; 
+    line-height: 1.6;
+    margin-bottom: 1em; 
+}
 
-}
-.info-box h2 { /* Adjust based on which heading level you're using for the title */
-    font-family: 'Sofia Sans Extra Condensed', sans-serif;
-    font-size: 70px;
-}
 
 .info-box:hover {
-    transform: translateY(-5px); /* Subtle hover effect, optional */
+    transform: translateY(-5px); 
 }
 
 
-/* Additional styles for individual info box buttons */
 .info-box-button {
-    background-color: #917fc1; /* Example background color */
-    color: white; /* Text color */
-    border: 8px solid #ede9f8; /* Border properties */
-    padding: 10px 1px; /* Padding properties */
-    margin-top: 90px; /* Spacing from other elements */
-    display: inline-block; /* Change from text link to block element */
-    text-align: center; /* Ensures text is centered */
-    border-radius: 50px; /* Rounded corners */
-    font-family: 'Sofia Sans', sans-serif; /* Placeholder, replace with actual font */
+    background-color: #917fc1; 
+    color: #3a2e73;
+    border: 8px solid #ede9f8; 
+    padding: 10px 1px; 
+    margin-top: 90px; 
+    display: inline-block; 
+    text-align: center; 
+    border-radius: 50px; 
+    font-family: 'Sofia Sans', sans-serif; 
     font-size: 25px;
-    text-align: center; /* Centers the text within the box */
+    text-align: center; 
     transition: transform 0.3s ease; 
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    transition: background-color 0.3s ease, color 0.3s ease; 
     box-sizing: border-box;
     cursor: pointer;
-    width: 100%; /* Adjusts the width to fit within the box */
-    margin-top: 140px; 
+    width: 100%; 
 }
 
 .info-box-button:hover {
-    background-color: #846ec6; /* Darker shade on hover */
-    color: #ffffcc; /* Lighter text color on hover */
+    background-color: #846ec6; 
+    color: #ffffcc; 
 }
 
 
 @media (max-width: 768px) {
     .info-box {
-        flex-basis: 100%; /* Stacks the boxes on smaller screens */
+        flex-basis: 100%; 
     }
 }
+
+
+
+
+
+
+
+
+.info-content-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    min-height: 90vh; 
+    width: 95%;
+    max-width: 1200px; 
+    margin: auto; 
+}
+
+.side-image {
+    width: 35%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+.info-boxes2 {
+    width: 65%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.info-box2 {
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #ede9f8; 
+    border: 8px solid #3a2e73 ; 
+    margin-bottom: 20px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 15px;
+    text-align: center; 
+    transition: transform 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 50px; 
+    color: #3a2e73;
+    
+}
+
+
+.button-area2 {
+    width: 65%; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around; 
+    margin: 10px -40px; 
+    flex-basis: 30%;
+    right: -500px;
+    bottom: 100px; 
+    gap: -100%; 
+
+}
+
+.info-box-button2 {
+    background-color: #917fc1; 
+    color: #3a2e73; 
+    border: 8px solid #ede9f8; 
+    padding: 10px 25px; 
+    margin: 0; 
+    display: block; 
+    text-align: center; 
+    border-radius: 50px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    width: auto; 
+    text-align: center; 
+    border-radius: 50px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 25px;
+    text-align: relative; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: inline-flex;
+    transition: all 0.3s ease;
+
+}
+.info-box-button:hover {
+    background-color: #846ec6; 
+    color: #ffffcc; 
+}
+
+.outer-box {
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px; 
+}
+.info-column {
+    display: flex;
+    flex-direction: column; 
+    flex: 2; 
+    margin-right: 10px; 
+    line-height: 1; 
+    margin-top: -2em;
+    margin-bottom: -1em;
+}
+.info-column:last-child {
+    margin-right: 0; 
+}
+
+@media (max-width: 768px) {
+    .info-content-wrapper {
+        flex-direction: column; 
+    }
+
+    .side-image, .info-boxes2, .button-area2 {
+        width: 100%; 
+    }
+}
+

@@ -7,18 +7,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg">
+    <div id="home" class="bg">
         <div class="content-area">
             <div class="button-container">
                 <div class="button-box">
                     <div class="animated-entry" id="animatedAboutUs" style="display:none;"></div>
-                    <a href="aboutUs.html" class="button">About Us</a>                
+                    <a href="#about" class="button">About Us</a>                
                     </div>
                 </div>
                 <div class="button-box">
                     </div>
                     <div class="animated-entry" id="animatedOurApp" style="display:none;"></div>
-                    <a href="ourApp.html" class="button">Our App</a>    
+                    <a href="#app" class="button">Our App</a>    
                     </div>            
                 </div>
             </div>
@@ -26,7 +26,7 @@
 
         <div class="contacts-container">
             <div class="button-box">
-                <a href="contacts.html" class="button">Contacts</a>            
+                <a href="#contact" class="button">Contacts</a>            
             </div>
         </div>
 
@@ -41,8 +41,11 @@
         </div>
         <script src="script.js"></script>
     </div>
+
+
+    
     <img class="ceiling-image" src="images/long.png" alt="Ceiling View">
-    <div class="info-boxes">
+    <div id="about" class="info-boxes">
         <div class="info-box">
             <h2>ABOUT US</h2>
             <p>SafeDeal Connect emerged from the vision to create a secure, digital commerce ecosystem. We are a team committed to delivering a seamless marketplace experience. Rooted in innovation, our company is a hub for trustworthy digital exchange. At the core, we are problem-solvers, dedicated to simplifying online shopping not only for products, but also for services. We are just on the beginning of our journey as a startup, but we intend to bring a new word to e-commerce. Our story is one of relentless progress and the unwavering belief in the transformative power of commerce. At SafeDeal Connect, we are redefining what it means to buy and sell in the digital age. We're not just a marketplace; we're a growing community of buyers and sellers who value integrity.</p>
@@ -58,16 +61,68 @@
             <h2>WHY US</h2>
             <p>Choose SafeDeal Connect as a marketplace that prioritizes your security with every click. We're not just a platform; we're a partnership with our users, dedicated to providing the best online buying and selling experience. User-centric design on our platform is easy to navigate, whether you're a buyer or a seller. We understand the value of your time and money, which is why our platform is optimized for efficiency and reliability. The diversity of the product that you can buy or sell on our marketplace means you’ll find exactly what you’re looking for! Our dedication to innovation means constantly improving our platform for your benefit. By choosing us, you join a community that values security, convenience, and a forward-thinking approach to e-commerce.</p>
         </div>
-        <!-- Button area under info boxes -->
+       
         <div class="content-area" style="position: relative; margin-top: 20px;">
             <div class="button-container">
                 <div class="button-box">
-                    <a href="index.html" class="info-box-button">Home</a>                
-                    <a href="ourApp.html" class="info-box-button">Our App</a>    
-                    <a href="contacts.html" class="info-box-button">Contacts</a>            
+                    <a href="#home" class="info-box-button">Home</a>                
+                    <a href="#app" class="info-box-button">Our App</a>    
+                    <a href="#contact" class="info-box-button">Contacts</a>            
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+    <div id="app" class="info-content-wrapper">
+        <img src="images/3.png" alt="Descriptive Alt Text" class="side-image">
+        <div class="info-boxes2">
+            <h2>SAFE DEAL   connect application</h2>
+            <div class="info-box2" id="about-us">
+                <p>“SafeDeal” app is a convenient online marketplace platform that will help young businesses grow and expand the capabilities of established companies. By combining accessibility, efficiency, and trust, the application transforms the way people engage in buying and selling, shaping a more connected and empowered society. We provide our customers with a user-friendly application that caters to both seasoned sellers and newcomers alike. The interface is designed with simplicity in mind, ensuring a smooth and intuitive experience for users of all backgrounds. Whether you're looking to sell pre-loved items, discover unique treasures, or engage in professional commerce, “SafeDeal” has you covered.</p>
+            </div>
+        
+            <div class="info-box2" id="our-mission">
+                <h4>What you get with “Safedeal” application:</h4>
+                <div class="outer-box">
+                    <div class="info-column">
+                        <p>User-friendly Interface</p>
+                        <p>Protection of Personal Data</p>
+                        <p>Personalized Profiles</p>
+                        <p>Placing offers</p>
+                    </div>
+                    <div class="info-column">
+                        <p>Ordering services</p>
+                        <p>Dynamic Categories</p>
+                        <p>Chat and notifications</p>
+                        <p>Customer Support</p>
+                    </div>
+                </div> 
+                <p> Download “SafeDeal Connect” now and experience it yourself:</p>
+                <p>AppStore - https://apps.apple.com/us/app/safe-deal-connect/id6477819843</p>
+                <p>PlayMarket - https://play.google.com/store/apps/details?id=sdc.connect</p>
+            </div>  
+        </div>
+    </div>
+          
+    <div class="button-area2" style="position: relative; margin-top: 20px;">
+
+                <a href="#home" class="info-box-button2">Home</a>                
+                <a href="#about" class="info-box-button2">About Us</a>    
+                <a href="#contact" class="info-box-button2">Contacts</a>            
+            </div>
+        </div>
+    </div>
+ 
+    <div id="contact" class="info-box">
+        <h2>CONTACT</h2>
+        <!-- Content for Contacts -->
+    </div>
+
+
+
 </body>
 </html>
