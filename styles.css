@@ -125,12 +125,11 @@ body, html {
 }
 
 .about-us-button {
-    margin-bottom: 80px; /* Increase the bottom margin to push "Our App" lower */
+    margin-bottom: 80px; 
  }
  
- /* Assuming .button-box might wrap individual buttons, we increase the margin there if needed */
  .button-box:first-child {
-    margin-bottom: 50px; /* This assumes the "About Us" is the first button */
+    margin-bottom: 50px; 
  }
 
 
@@ -161,18 +160,16 @@ body, html {
     flex-direction: column;
     align-items: flex-end;
     position: relative;
-    z-index: 1000; /* Ensures the buttons are above other content */
+    z-index: 1000; 
 }
 
-/* Ensures contacts area does not overlap button area and remains accessible */
 .contacts-container {
     position: fixed;
     left: 10px;
     bottom: 3px;
-    z-index: 1000; /* Adjust as needed to bring to the front */
+    z-index: 1000; 
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .image-slider {
         bottom: 20px; 
