@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;700&family=Sofia+Sans+Extra+Condensed:wght@400;700&display=swap');
 body, html {
-    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -105,11 +104,11 @@ body, html {
 }
 .left-arrow {
     left: 35%; 
-    transform: translateY(100%);
+    transform: translateY(-50%);
 }
 .right-arrow {
     right: 35%; 
-    transform: translateY(100%);
+    transform: translateY(-50%);
 }
 
 .content-area {
@@ -140,20 +139,20 @@ body, html {
 
 .button {
     text-decoration: none;
-    background-color: #917fc1; 
-    border: 4px solid #ede9f8; 
-    color: #3a2e73; 
-    padding: 10px 25px; 
+    color: white;
+    background-color: transparent;
+    padding: 10px 15px; 
     border-radius: 50px; 
+    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Sofia Sans', sans-serif;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .button:hover {
-    background-color: #5a498f;
+    background-color: #669;
 }
 
 .button-container, .contacts-container {
@@ -176,7 +175,7 @@ body, html {
         bottom: 20px; 
     }
     .image-holder img.active {
-        width: 100%; 
+        width: 50%; 
     }
 }
 
@@ -192,46 +191,39 @@ body, html {
     margin: 20px 0; 
 }
 
-.small-image2 {
-    width: 100%; 
-    height: auto; 
-    margin-top: 20px; 
+.small-image {
+    width: 100%;
+    max-width: 50px; /* Adjust to desired max size */
+    height: auto;
+    margin: 10px auto 20px; /* centered the image horizontally and gave it some margin above and below */
 }
 
-.small-image {
-    width: 70%; 
-    height:70%; 
-    margin-top: 20px; 
-}
 .info-boxes {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #868e96; /* Rectangle color */
-    padding: 20px; /* Padding around boxes within rectangle */
-    border-radius: 10px; /* Modifiable as per design */
-    box-sizing: border-box; /* Helps with maintaining width, height while applying padding */
-    width: 60%; /* Modifiable as per design */
-    margin: 0 auto; /* Center the rectangle (auto) on the page */
-    gap: 20px; /* Gap between the boxes */
-    align-items: stretch; /* Forces every item to align stretching */
+    align-items: stretch;
+    gap: 8px; 
+    padding: 10px;
+    margin-top: 10px; 
+    line-height: 1.6; 
+    margin-bottom: 1em;
 }
-#about {
-    background-color: #3a2e73; /* This is the rectangle color */
-    padding: 30px; /* Padding for inner space */
-    margin-bottom: 20px; /* Space between the info boxes */
-    border-radius: 50px; 
-  }
-  
-  .info-box {
-    flex: 1 0 18%; /* This property allows boxes to be the same size and line up in a row. Adjust as needed */
-    background-color: #ede9f8; /* Making Info box color white */
-    padding: 20px;  /* Padding for inner space */
-    border-radius: 10px;  /* If you want rounded boxes */
-    box-sizing: border-box; /* Handles the width and height while adding padding */
-    text-align: center; /* Centers text within the box */
-    height: auto; /* Defines height */
-    overflow-wrap: break-word;
+.info-box {
+    flex-grow: 1; /* This will allow the boxes to grow and fill the space */
+    flex-basis: 0; /* This will allow for shrinking if needed */
+    max-width: 100%; /* This makes sure the boxes don't overflow */
+    padding: 20px;
+    background-color: #ede9f8;
+    border: 10px solid #3a2e73;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 0.8rem; /* Reduce the font size */
+    text-align: center;
+    transition: transform 0.3s ease;
+    line-height: 1.6;
+    margin-bottom: 1em;
 }
 .info-box:hover {
     transform: translateY(-5px); 
@@ -246,7 +238,7 @@ body, html {
     text-align: center; 
     border-radius: 50px; 
     font-family: 'Sofia Sans', sans-serif; 
-    font-size: 25px;
+    font-size: 15px;
     text-align: center; 
     transition: transform 0.3s ease; 
     transition: background-color 0.3s ease, color 0.3s ease; 
@@ -275,40 +267,37 @@ body, html {
     align-items: flex-start; 
     min-height: 90vh; 
     width: 95%;
-    /* max-width: 1200px;  */
+    max-width: 1200px; 
     margin: auto; 
 }
 
 .side-image {
     width: 35%; 
-    height: 35%;
+    height: auto; 
     object-fit: cover; 
-    left: 0;
 }
 
 .info-boxes2 {
+    width: 65%; 
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: #868e96; /* Rectangle color */
-    padding: 20px; /* Padding around boxes within rectangle */
-    border-radius: 10px; /* Modifiable as per design */
-    box-sizing: border-box; /* Helps with maintaining width, height while applying padding */
-    width: 60%; /* Modifiable as per design */
-    margin: 0 auto; /* Center the rectangle (auto) on the page */
-    gap: 20px; /* Gap between the boxes */
-    align-items: stretch; /* Forces every item to align stretching */
+    flex-direction: column; 
+    align-items: center; 
 }
 .info-box2 {
-    flex: 1 0 18%; /* This property allows boxes to be the same size and line up in a row. Adjust as needed */
-    background-color: #ede9f8; /* Making Info box color white */
-    padding: 20px;  /* Padding for inner space */
-    border-radius: 10px;  /* If you want rounded boxes */
-    box-sizing: border-box; /* Handles the width and height while adding padding */
-    text-align: center; /* Centers text within the box */
-    height: auto; /* Defines height */
-    overflow-wrap: break-word;
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #ede9f8; 
+    border: 8px solid #3a2e73 ; 
+    margin-bottom: 20px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 15px;
+    text-align: left; 
+    transition: transform 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 50px; 
+    color: #3a2e73;
+    
 }
 .button-area2 {
     width: 65%; 
@@ -376,12 +365,8 @@ body, html {
     .info-content-wrapper {
         flex-direction: column; 
     }
-    .side-image {
-        width: 100%; 
-        height: auto;
-    }
 
-    .button-area2 {
+    .side-image, .info-boxes2, .button-area2 {
         width: 100%; 
     }
 }
@@ -392,95 +377,45 @@ body, html {
 /* CONTACTS */
 .info-content-wrapper2 {
     display: flex;
-    justify-content: center; 
-    align-items: flex-start; 
-    min-height: 90vh; 
-    width: 95%;
-    /* max-width: 1200px;  */
-    margin: auto; 
-}
-
-.side-image2 {
-    width: 35%; 
-    height: 35%;
-    object-fit: cover; 
-    left: 0;
-}
-
-.info-boxes3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: #868e96; /* Rectangle color */
-    padding: 20px; /* Padding around boxes within rectangle */
-    border-radius: 10px; /* Modifiable as per design */
-    box-sizing: border-box; /* Helps with maintaining width, height while applying padding */
-    width: 60%; /* Modifiable as per design */
-    margin: 0 auto; /* Center the rectangle (auto) on the page */
-    gap: 20px; /* Gap between the boxes */
-    align-items: stretch; /* Forces every item to align stretching */
-}
-.info-box {
-    flex: 1 0 18%; /* This property allows boxes to be the same size and line up in a row. Adjust as needed */
-    background-color: #ede9f8; /* Making Info box color white */
-    padding: 20px;  /* Padding for inner space */
-    border-radius: 10px;  /* If you want rounded boxes */
-    box-sizing: border-box; /* Handles the width and height while adding padding */
-    text-align: center; /* Centers text within the box */
-    height: auto; /* Defines height */
-    overflow-wrap: break-word;
-}
-
-
-
-
-
-.info-content-wrapper2 {
-    display: flex;
     flex-direction: row; 
-    justify-content: space-between; 
+    justify-content: flex-start; 
     align-items: flex-start;
-    height: 70vh;
-    width: 60%;
+    min-height: 90vh;
+    width: 95%;
+    max-width: 1200px;
     margin: auto;
     position: relative; 
     overflow: hidden;
 }
-
 .side-image2 {
     order: 2;
     width: 35%; 
+    height: auto; 
     object-fit: cover; 
-    margin-left: 10px;
-    align-self: flex-end;
+    margin-left: auto;
 }
-
 .info-boxes3 {
+    order: 1;
+    width: 65%; 
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex: 1;
-    background-color: #3a2e73; /* Rectangle color */
-    padding: 20px; /* Padding around boxes within rectangle */
-    border-radius: 10px; /* Modifiable as per design */
-    box-sizing: border-box; /* Helps with maintaining width, height while applying padding */
-    width: 50%; 
-    gap: 50px; /* Gap between the boxes */
+    flex-direction: column; 
+    align-items: center; 
+    position: relative;
+    z-index: 2; 
 }
-
 .info-box3 {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-basis: 18%; /* This property allows boxes to be the same size and line up in a row. Adjust as needed */
-    background-color: #ede9f8; /* Making Info box color white */
-    padding: 20px;  /* Padding for inner space */
-    border-radius: 10px;  /* If you want rounded boxes */
-    box-sizing: border-box; /* Handles the width and height while adding padding */
-    text-align: center; /* Centers text within the box */
-    height: 30; /* Defines height */
-    overflow-wrap: break-word;
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #ede9f8; 
+    border: 8px solid #3a2e73; 
+    margin-bottom: 20px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 15px;
+    text-align: left; 
+    transition: all 0.3s ease;
+    border-radius: 50px; 
+    color: #3a2e73;
 }
 .button-area3 {
     width: 65%;
@@ -541,93 +476,14 @@ body, html {
 @media (max-width: 768px) {
     .info-content-wrapper2 {
         flex-direction: column;
-
+        align-items: center; 
     }
-    .info-boxes3, .side-image2{
-        width: 100%;
+    .info-boxes3 {
+        width: 100%; 
     }
-}
-
-
-/* last user input */
-
-input, textarea {
-    width: 100%; /* Adjust as necessary */
-    padding: 10px;
-    margin-bottom: 10px; /* Space between fields */
-    border: 1px solid #ccc; /* Placeholder border style */
-    border-radius: 5px; /* Matching the design's rounded theme */
-}
-
-input::placeholder, textarea::placeholder {
-    color: #aaa; /* Placeholder text color */
-}
-
-
-    .info-content-wrapper2 .info-box3 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Align items to the start */
-    }
-    
-    .outer-box2 {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-    
-    .info-column2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Center align the flex items */
-        margin-right: 20px; /* Adjust spacing as needed */
-    }
-    
-    .info-column2 label {
-        margin-bottom: 10px; /* Space between label and input box */
-        text-align: left; /* Align the text to the left */
-        width: 100%; /* Make label take full width */
-    }
-    
-    input[type="email"], input[type="text"], textarea {
-        width: calc(100% - 20px); /* Adjust width to match label column, consider border and padding */
-        padding: 10px;
-        margin-bottom: 20px; /* Space between each input/textarea */
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-    
-    /* Adjustments for small screens */
-    @media (max-width: 768px) {
-        .outer-box2, .info-column2 {
-            flex-direction: column;
-            align-items: center;
-        }
-    
-        input[type="email"], input[type="text"], textarea {
-            width: 90%; /* Adjust for smaller screens */
-        }
-    }
-
-/* Style adjustments for responsiveness */
-@media (max-width: 768px) {
-    input, textarea {
-        width: 90%; /* Might need adjustment based on the container's padding and design */
+    .side-image2 {
+        width: 100%; 
+        margin-left: 0; 
     }
 }
 
-
-
-
-
-@media (max-width: 768px) {
-    .info-box, .info-box2, .info-box3 {
-        flex-basis: 100%; /* Allocates full width to boxes for screens with width less than or equal to 768px */
-        height: auto; 
-    }
-
-    .info-boxes, .info-boxes2, .info-boxes3 {
-        padding: 10px;
-        width: 90%; /* Decrease the width for mobile devices for better visual presentation */
-    }
-}
