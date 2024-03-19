@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0",
+    "command": "Chrome",
+    "windows": {
+        "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+    },
+    "args": [
+        "${file}"
+    ],
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "python.analysis.diagnosticSeverityOverrides": {
+        
+    },
+    "terminal.integrated.inheritEnv": false,
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
+    "cmake.options.statusBarVisibility": "visible",
+    "php.validate.executablePath": ""
+}

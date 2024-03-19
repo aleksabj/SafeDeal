@@ -377,7 +377,7 @@ body, html {
     justify-content: flex-start; 
     align-items: flex-start;
     min-height: 90vh;
-    width: 95%;
+    width: 100%;
     max-width: 1200px;
     margin: auto;
     position: relative; 
@@ -392,7 +392,7 @@ body, html {
 }
 .info-boxes3 {
     order: 1;
-    width: 65%; 
+    width: 135%; 
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -484,3 +484,69 @@ body, html {
 }
 
 
+/* last user input */
+
+input, textarea {
+    width: 100%; /* Adjust as necessary */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between fields */
+    border: 1px solid #ccc; /* Placeholder border style */
+    border-radius: 5px; /* Matching the design's rounded theme */
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+
+    .info-content-wrapper2 .info-box3 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the start */
+    }
+    
+    .outer-box2 {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .info-column2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center align the flex items */
+        margin-right: 20px; /* Adjust spacing as needed */
+    }
+    
+    .info-column2 label {
+        margin-bottom: 10px; /* Space between label and input box */
+        text-align: left; /* Align the text to the left */
+        width: 100%; /* Make label take full width */
+    }
+    
+    input[type="email"], input[type="text"], textarea {
+        width: calc(100% - 20px); /* Adjust width to match label column, consider border and padding */
+        padding: 10px;
+        margin-bottom: 20px; /* Space between each input/textarea */
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    /* Adjustments for small screens */
+    @media (max-width: 768px) {
+        .outer-box2, .info-column2 {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        input[type="email"], input[type="text"], textarea {
+            width: 90%; /* Adjust for smaller screens */
+        }
+    }
+
+/* Style adjustments for responsiveness */
+@media (max-width: 768px) {
+    input, textarea {
+        width: 90%; /* Might need adjustment based on the container's padding and design */
+    }
+}

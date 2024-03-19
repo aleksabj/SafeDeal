@@ -183,31 +183,36 @@
 
     <h1>OUR CONTACTS</h1>
     <div id="contact" class="info-content-wrapper2">
-        <div class="info-boxes3">
-            <div class="info-box3">
-                <p>If you have any questions or suggestions, feel free to contact us any time!</p>
-                <p>Telephone:</p>
-                <p>Our office is located at [address]</p>
-            </div>
-        
-            <div class="info-box3">
-                <h4>To contact us by e-mail, please fill in the form below:</h4>
-                <div class="outer-box2">
-                    <div class="info-column2">
-                        <p>Your e-mail:</p>
-                        <p>Theme:</p>
-                        <p>Message:</p>
-                    </div>
-                    <div class="info-column2">
-                        <p>___________________</p>
-                        <p>___________________</p>
-                        <p>___________________</p>
-                    </div>
-                </div> 
-            </div>
-        </div>  
-        <img src="images/lastimage.jpg" alt="Descriptive Alt Text" class="side-image2">
+        <form action="send_email.php" method="POST">
+            <div class="info-boxes3">
+                <div class="info-box3">
+                    <p>If you have any questions or suggestions, feel free to contact us any time!</p>
+                    <p>Telephone:</p>
+                    <p>Our office is located at [address]</p>
+                </div>
+    
+                <div class="info-box3">
+                    <h4>To contact us by e-mail, please fill in the form below:</h4>
+                    <div class="outer-box2">
+                        <div class="info-column2">
+                            <label for="email">Your e-mail:</label>
+                            <label for="theme">Theme:</label>
+                            <label for="message">Message:</label>
+                        </div>
+                        <div class="info-column2">
+                            <input type="email" id="email" name="email" placeholder="Your email address" required>
+                            <input type="text" id="theme" name="theme" placeholder="Subject of your message" required>
+                            <textarea id="message" name="message" placeholder="Write your message here" rows="6" required></textarea>
+                        </div>
+                    </div> 
+                    <button type="submit" class="button">Send Message</button>
+                </div>
+            </div>  
+        </form>
+    <img src="images/lastimage.jpg" alt="Descriptive Alt Text" class="side-image2">
+
     </div>
+    
     
 
 
