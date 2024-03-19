@@ -7,6 +7,7 @@ body, html {
     font-family: 'Sofia Sans', sans-serif;
     color: #3a2e73;
     scroll-behavior: smooth;
+    text-align: center;
 }
 
 .bg {
@@ -178,6 +179,11 @@ body, html {
     }
 }
 
+
+
+
+
+/* SECOND PAGE */
 .ceiling-image {
     width: 100%;
     height: auto; 
@@ -190,9 +196,6 @@ body, html {
     height: auto; 
     margin-top: 20px; 
 }
-
-
-
 .info-boxes {
     display: flex;
     justify-content: center;
@@ -204,7 +207,6 @@ body, html {
     line-height: 1.6; 
     margin-bottom: 1em;
 }
-
 .info-box {
     flex-basis: 30%; 
     padding: 20px; 
@@ -219,13 +221,9 @@ body, html {
     line-height: 1.6;
     margin-bottom: 1em; 
 }
-
-
 .info-box:hover {
     transform: translateY(-5px); 
 }
-
-
 .info-box-button {
     background-color: #917fc1; 
     color: #3a2e73;
@@ -250,7 +248,6 @@ body, html {
     color: #ffffcc; 
 }
 
-
 @media (max-width: 768px) {
     .info-box {
         flex-basis: 100%; 
@@ -259,11 +256,7 @@ body, html {
 
 
 
-
-
-
-
-
+/* ALIGN ROW */
 .info-content-wrapper {
     display: flex;
     justify-content: center; 
@@ -286,7 +279,6 @@ body, html {
     flex-direction: column; 
     align-items: center; 
 }
-
 .info-box2 {
     width: 100%; 
     box-sizing: border-box;
@@ -296,15 +288,13 @@ body, html {
     margin-bottom: 20px; 
     font-family: 'Sofia Sans', sans-serif; 
     font-size: 15px;
-    text-align: center; 
+    text-align: left; 
     transition: transform 0.3s ease; 
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 50px; 
     color: #3a2e73;
     
 }
-
-
 .button-area2 {
     width: 65%; 
     display: flex;
@@ -317,7 +307,6 @@ body, html {
     gap: -100%; 
 
 }
-
 .info-box-button2 {
     background-color: #917fc1; 
     color: #3a2e73; 
@@ -351,7 +340,6 @@ body, html {
     color: #ffffcc; 
 
 }
-
 .outer-box {
     display: flex;
     justify-content: space-between; 
@@ -369,7 +357,6 @@ body, html {
 .info-column:last-child {
     margin-right: 0; 
 }
-
 @media (max-width: 768px) {
     .info-content-wrapper {
         flex-direction: column; 
@@ -379,4 +366,121 @@ body, html {
         width: 100%; 
     }
 }
+
+
+
+
+/* CONTACTS */
+.info-content-wrapper2 {
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: flex-start;
+    min-height: 90vh;
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative; 
+    overflow: hidden;
+}
+.side-image2 {
+    order: 2;
+    width: 35%; 
+    height: auto; 
+    object-fit: cover; 
+    margin-left: auto;
+}
+.info-boxes3 {
+    order: 1;
+    width: 65%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    position: relative;
+    z-index: 2; 
+}
+.info-box3 {
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #ede9f8; 
+    border: 8px solid #3a2e73; 
+    margin-bottom: 20px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 15px;
+    text-align: left; 
+    transition: all 0.3s ease;
+    border-radius: 50px; 
+    color: #3a2e73;
+}
+.button-area3 {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px -40px;
+    gap: 20px; 
+}
+.info-box-button3 {
+    background-color: #917fc1; 
+    color: #3a2e73; 
+    border: 8px solid #ede9f8; 
+    padding: 10px 25px; 
+    margin: 0; 
+    display: block; 
+    text-align: center; 
+    border-radius: 50px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    width: auto; 
+    text-align: center; 
+    border-radius: 50px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 25px;
+    text-align: relative; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: inline-flex;
+    transition: all 0.3s ease;
+}
+.info-box-button3:hover {
+    background-color: #5a498f; 
+    color: #ffffcc; 
+}
+.outer-box2 {
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px; 
+}
+.info-column2 {
+    display: flex;
+    flex-direction: column; 
+    flex: 2; 
+    margin-right: 10px; 
+    line-height: 1; 
+    margin-top: -2em;
+    margin-bottom: -1em;
+}
+.info-column2:last-child {
+    margin-right: 0; 
+}
+@media (max-width: 768px) {
+    .info-content-wrapper2 {
+        flex-direction: column;
+        align-items: center; 
+    }
+    .info-boxes3 {
+        width: 100%; 
+    }
+    .side-image2 {
+        width: 100%; 
+        margin-left: 0; 
+    }
+}
+
 
