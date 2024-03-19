@@ -139,20 +139,20 @@ body, html {
 
 .button {
     text-decoration: none;
-    color: white;
-    background-color: transparent;
-    padding: 10px 15px; 
+    background-color: #917fc1; 
+    border: 4px solid #ede9f8; 
+    color: #3a2e73; 
+    padding: 10px 25px; 
     border-radius: 50px; 
-    border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-family: 'Sofia Sans', sans-serif;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .button:hover {
-    background-color: #669;
+    background-color: #5a498f;
 }
 
 .button-container, .contacts-container {
