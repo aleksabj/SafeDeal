@@ -10,11 +10,88 @@ body, html {
     text-align: center;
 }
 
-h1, h2 {
+h2 {
     font-family: 'Six Caps', sans-serif;
     font-size: 55px;
     letter-spacing: 2px;
     color: #917fc1;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', bold;
+    font-size: 65px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: rgb(107, 88, 161);
+}
+
+/* Applies to all similar content wrappers */
+.info-content-wrapper, .info-content-wrapper2, .info-content-wrapper4 {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto; 
+    gap: 20px;
+}
+
+/* Adjusting the side image to have a fixed width while allowing the content area to take up the remaining space */
+.side-image {
+    width: auto; /* Let the image maintain its aspect ratio */
+    max-width: 30%; /* Adjust according to your design */
+    flex: none; /* Prevents the image from growing or shrinking */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Setting the layout for areas following the side image */
+.info-boxes24, .info-boxes2, .info-boxes3 { /* Apply these styles to all your .info-boxes* classes */
+    display: flex;
+    flex-direction: row; /* Horizontally aligns all child boxes */
+    flex-wrap: wrap; /* Allows child elements to wrap as needed */
+    gap: 20px;
+    width: 70%; /* Adjust according to your layout/preferences */
+    justify-content: flex-start; /* Aligns children at the start */
+    align-items: flex-start; /* Aligns items at their cross-start */
+}
+
+.info-box24, .info-box2, .info-box3 { /* Apply these styles to all your .info-box* classes for uniformity */
+    flex: 1 1 calc(33.33% - 20px); /* Flex-grow | Flex-shrink | Basis - adapts the element to fill the space, adjusting for the gap */
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #ede9f8;
+    border: 8px solid #3a2e73;
+    border-radius: 50px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-area2, .button-area24 { /* Apply these styles if you have multiple button areas */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjusts the positioning of buttons */
+    gap: 20px; /* Provides spacing between buttons */
+}
+
+/* Responsive settings */
+@media (max-width: 768px) {
+    .info-content-wrapper, .info-content-wrapper2, .info-content-wrapper4 {
+        flex-direction: column;
+    }
+
+    .info-boxes24, .info-boxes2, .info-boxes3, .side-image {
+        width: 100%; /* Ensures full width in a stacked layout on smaller screens */
+    }
+
+    .info-box24, .info-box2, .info-box3 {
+        flex-basis: 100%; /* Adjusts basis for a full-width single column layout */
+    }
 }
 
 
@@ -205,7 +282,7 @@ h1, h2 {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: stretch;
-    gap: 8px; 
+    gap: 18px; 
     padding: 10px;
     margin-top: 10px; 
     line-height: 1.6; 
@@ -234,8 +311,8 @@ h1, h2 {
     background-color: #917fc1; 
     color: white;
     border: 8px solid #ede9f8; 
-    padding: 10px 1px; 
-    margin-top: 90px; 
+    padding: 1px 1px; 
+    margin-top: 30px; 
     display: inline-block; 
     text-align: center; 
     border-radius: 50px; 
@@ -268,21 +345,31 @@ h1, h2 {
 .info-content-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; 
+    justify-content: center;; 
     align-items: flex-start; 
-    flex-wrap: wrap;
     min-height: 90vh; 
-    width: 95%;
-    max-width: 1200px; 
+    width: 100%;
     margin: auto; 
     gap: 20px;
 }
 
 .side-image {
-    width: 25%; 
+    flex: 1;
+    width: calc(40% - 10px);
     height: auto; 
-    left: -1000px;
     object-fit: cover; 
+}
+.info-boxes2 {
+    flex: 3;
+    gap: 20px;
+    justify-content: space-around;
+    width: 100%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+.info-boxes3, .info-box3 {
+    width: 100%; /* Ensures the boxes take full width */
 }
 
 .info-boxes2 {
@@ -290,15 +377,13 @@ h1, h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-around;
-    width: 65%; 
+    width: 100%; 
     display: flex;
     flex-direction: column; 
     align-items: center; 
 }
 .info-box2 {
     flex: 1 1 200px; /* Let boxes grow but start with a basis of 200px */
-    max-width: 400px; /* Prevent the boxes from growing too large */
-    /* Other styles remain unchanged */
     width: 100%; 
     box-sizing: border-box;
     padding: 10px;
@@ -321,9 +406,9 @@ h1, h2 {
     flex-direction: row; 
     justify-content: space-between;
     padding: 0px 15px; 
-    margin: 10px -40px; 
+    margin: 10px 40px; 
     flex-basis: 30%;
-    right: -500px;
+    right: 70px;
     bottom: 40px; 
     gap: 90px; 
 
@@ -367,7 +452,145 @@ h1, h2 {
     justify-content: space-between; 
     padding: 20px; 
 }
-.info-column {
+.info-column-features, .info-column-download {
+    flex: 1; 
+    margin-right: 10px;
+}
+
+.info-column-features ul {
+    padding: 0;
+    list-style-type: disc; /* Add bullet points */
+    margin-left: 20px; /* Align bullet points */
+}
+
+.info-column-download {
+    margin-right: 0; /* Remove right margin for last column */
+}
+
+.info-column-download a {
+    color: #3a2e73;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .outer-box {
+        flex-direction: column; 
+    }
+
+    .info-column-download {
+        margin-top: 20px; /* Add some space above the download links for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+.info-content-wrapper4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    min-height: 90vh; 
+    width: 95%;
+    max-width: 1200px; 
+    margin: auto; 
+    gap: 20px;
+}
+
+.side-image4 {
+    width: 25%; 
+    height: auto; 
+    left: -1000px;
+    object-fit: cover; 
+}
+
+.info-boxes24 {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    width: 65%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+.info-box24 {
+    flex: 1 1 200px; /* Let boxes grow but start with a basis of 200px */
+    max-width: 400px; /* Prevent the boxes from growing too large */
+    /* Other styles remain unchanged */
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #ede9f8; 
+    border: 8px solid #3a2e73 ; 
+    margin-bottom: 20px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left; 
+    transition: transform 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 50px; 
+    color: #3a2e73;
+    
+}
+.button-area24 {
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    padding: 0px 15px; 
+    margin: 10px -40px; 
+    flex-basis: 30%;
+    right: -500px;
+    bottom: 40px; 
+    gap: 90px; 
+
+}
+.info-box-button24 {
+    background-color: #917fc1; 
+    color: white; 
+    border: 8px solid #ede9f8; 
+    padding: 10px 25px; 
+    margin: 0; 
+    display: block; 
+    text-align: center; 
+    border-radius: 50px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-weight: 900;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    width: auto; 
+    text-align: center; 
+    border-radius: 50px; 
+    font-family: 'Sofia Sans', sans-serif; 
+    font-size: 25px;
+    text-align: relative; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: inline-flex;
+    transition: all 0.3s ease;
+
+}
+.info-box-button24:hover {
+    background-color: #5a498f; 
+    color: #ffffcc; 
+
+}
+.outer-box4 {
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px; 
+}
+.info-column4 {
     display: flex;
     flex-direction: column; 
     flex: 2; 
@@ -376,18 +599,21 @@ h1, h2 {
     margin-top: -2em;
     margin-bottom: -1em;
 }
-.info-column:last-child {
+.info-column4:last-child {
     margin-right: 0; 
 }
 @media (max-width: 768px) {
-    .info-content-wrapper {
+    .info-content-wrapper4 {
         flex-direction: column; 
     }
 
-    .side-image, .info-boxes2, .button-area2 {
+    .side-image4, .info-boxes24, .button-area4 {
         width: 100%; 
     }
 }
+
+
+
 
 
 
@@ -504,3 +730,12 @@ h1, h2 {
     }
 }
 
+
+
+.info-box.full-width .info-boxes {
+    width: 100vw; /* Stretch to the viewport's full width */
+    max-width: 100%; /* Ensures it doesn't exceed the parent's width */
+    margin-left: calc(-50vw + 50%); /* Center align the content */
+    box-sizing: border-box; /* Includes padding in the element's total width */
+    padding: 0 20px; /* Adds some padding on both sides */
+}
