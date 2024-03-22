@@ -19,3 +19,27 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlide(currentIndex);
     });
 });
+
+
+window.addEventListener('scroll', function() {
+    var fixedButtonsLeft = document.querySelectorAll('.fixed-button-left');
+    var fixedButtonsRight = document.querySelectorAll('.fixed-buttons-right .fixed-button');
+
+    var changeOpacity = function(buttons, opacity) {
+        buttons.forEach(function(button) {
+            button.style.opacity = opacity;
+        });
+    };
+
+    var scrollPosition = window.scrollY;
+
+    var threshold = 50; 
+
+    if (scrollPosition > threshold) {
+        changeOpacity(fixedButtonsLeft, 0.5);
+        changeOpacity(fixedButtonsRight, 0.5);
+    } else {
+        changeOpacity(fixedButtonsLeft, 1);
+        changeOpacity(fixedButtonsRight, 1);
+    }
+});
