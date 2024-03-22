@@ -255,9 +255,10 @@ h1 {
 }
 
 .side-image {
-    max-width: 50%; 
+    max-width: 30%; 
     height: auto;
     object-fit: contain;
+
 }
 .info-boxes2 {
     flex: 1;
@@ -271,8 +272,8 @@ h1 {
 
 .info-box2 {
     box-sizing: border-box;
-    display: flex; /* ensure that box itself is a flex container */
-    flex-direction: column; /* stack children vertically */
+    display: flex; 
+    flex-direction: column; 
     justify-content: space-between; 
     width: 90%; 
     box-sizing: border-box;
@@ -312,7 +313,7 @@ h1 {
 
 .info-box2 > p:last-child,
 .info-box12 > div:last-child {
-    margin-bottom: 0; /* remove margin from the last child to prevent extra space */
+    margin-bottom: 0; 
 }
 
 .outer-box {
@@ -345,38 +346,39 @@ h1 {
 .features-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px; /* Space before the download text */
+    margin-bottom: 20px; 
 }
 
 .features-list {
-    flex-basis: calc(50% - 10px); /* Adjust the flex-basis to account for the gap */
-    list-style-type: none; /* Remove default list styling */
+    flex-basis: calc(50% - 10px); 
+    list-style-type: none;
     padding: 0;
-    margin: 0; /* Adjust margin as needed */
+    margin: 0; 
 }
 
 .features-list li {
     color:#ede9f8;
-    text-align: center; /* Align text to the left */
-    background-color: #917fc1; /* Semi-transparent bubble */
+    text-align: center; 
+    background-color: #917fc1; 
     border-radius: 20px;
     padding: 10px;
-    margin-bottom: 10px; /* Space between bubbles */
+    margin-bottom: 10px; 
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
 }
 
 .download-text {
     font-weight: 600;
-    font-size: 18px; /* Adjust font size as needed */
-    margin: 20px 0; /* Space before and after the text */
-    text-align: center; /* Center the download prompt */
+    font-size: 18px; 
+    margin: 20px 0; 
+    text-align: center; 
 }
 
 .store-badges {
     display: flex;
-    justify-content: center; /* Center the badges horizontally */
-    align-items: center; /* Center the badges vertically */
-    gap: 100px; /* Add some space between the badges */
+    justify-content: center; 
+    align-items: center; 
+
+    gap: 100px; 
 }
 
 @media (max-width: 768px) {
@@ -389,11 +391,11 @@ h1 {
     }
 
     .info-box12 {
-        text-align: center; /* Center text on smaller screens */
+        text-align: center; 
     }
 
     .store-badges {
-        flex-direction: row; /* Ensure badges are in a row on smaller screens */
+        flex-direction: row; 
     }
 }
 
