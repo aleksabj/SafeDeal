@@ -673,20 +673,20 @@ h1 {
 
 .small-image {
     width: 100%;
-    max-width: 400px; /* Adjust to desired max size */
+    max-width: 400px;
     height: auto;
-    margin: 10px auto 20px; /* centered the image horizontally and gave it some margin above and below */
+    margin: 10px auto 20px; 
 }
 
 .small-image3 {
-    width: 80%; /* Ensures images are fully responsive within the container's width */
-    height: 500px; /* Fixed height to ensure all images are of the same size */
-    object-fit: contain; /* Or use contain based on your preference */
-    margin-top: 5px; /* Adjusts the space between the text and the image */
-    margin-bottom: 15px; /* centered the image horizontally and gave it some margin above and below */
-    display: block; /* Centers the image in its container */
+    width: 80%; 
+    height: 500px; 
+    object-fit: contain; 
+    margin-top: 5px; 
+    margin-bottom: 15px; 
+    display: block; 
     margin-left: auto; 
-    margin-right: auto;/* centered the image horizontally and gave it some margin above and below */
+    margin-right: auto;
 }
 
 
@@ -790,8 +790,8 @@ h1 {
     margin-right: 0; 
 }
 label, input, textarea {
-    margin: 8px 0; /* Spacing for form elements */
-    width: 100%; /* Ensure full width for inputs in a flex column */
+    margin: 8px 0;
+    width: 100%; 
 }
 
 @media (max-width: 768px) {
@@ -803,19 +803,78 @@ label, input, textarea {
         max-width: none;
     }
     .info-boxes3 {
-        width: auto; /* Allow the boxes to take the necessary space */
+        width: auto; 
     }
     .contact-image {
-        order: -1; /* This will place the image at the top on small screens */
+        order: -1; 
     }
 }
 
 
 
 .info-box.full-width .info-boxes {
-    width: 100vw; /* Stretch to the viewport's full width */
-    max-width: 100%; /* Ensures it doesn't exceed the parent's width */
-    margin-left: calc(-50vw + 50%); /* Center align the content */
-    box-sizing: border-box; /* Includes padding in the element's total width */
-    padding: 0 20px; /* Adds some padding on both sides */
+    width: 100vw; 
+    max-width: 100%; 
+    margin-left: calc(-50vw + 50%); 
+    box-sizing: border-box; 
+    padding: 0 20px; 
 }
+
+
+
+
+.fixed-buttons {
+    position: fixed;
+    left: 0; 
+    bottom: 80px;
+    width: 100%; 
+    z-index: 100; 
+  }
+  
+  .fixed-button-left,
+  .fixed-buttons-right .fixed-button {
+    pointer-events: auto; 
+    position: absolute; 
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #917fc1; 
+    color: white; 
+    font-weight: 900;
+    text-decoration: none; 
+    border-radius: 50px; 
+    border: 8px solid #ede9f8; 
+    text-align: center;
+    font-size: 20px;
+    transition: background-color 0.3s; 
+  }
+  
+
+  .fixed-button-left {
+    left: 20px; 
+    
+  }
+  
+  .fixed-button-left + .fixed-button-left {
+    left: 20px;
+    bottom: 80px; 
+  }
+  
+
+  .fixed-buttons-right {
+    right: 0px; 
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .fixed-buttons-right .fixed-button + .fixed-button {
+    margin-top: 0px; 
+  }
+  
+  .fixed-buttons-right .fixed-button:hover, 
+  .fixed-button-left:hover {
+    background-color: #5a498f; 
+    color: #fff; 
+  }
+  
