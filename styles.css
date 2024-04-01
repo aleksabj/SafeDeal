@@ -9,6 +9,24 @@ body, html {
     scroll-behavior: smooth;
     text-align: center;
 }
+.title-badge {
+    position: absolute;
+    transform: scaleY(1); /* Stretches the text to 1.5 times its original height */
+    letter-spacing: 6px;
+    font-weight: 900;
+    top: 250px;
+    left: 90px;
+    background-color: rgba(145, 127, 193, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 70px; 
+    z-index: 101; 
+    transform-origin: top left; /* Scale from the top left corner */
+    transition: transform 0.3s ease; /* Animate the scaling smoothly */
+}
+
 
 h2 {
     font-family: 'Six Caps', sans-serif;
@@ -54,6 +72,7 @@ h1 {
     background-size: cover;
     height: 100vh;
 }
+
 
 .top-right-buttons {
     position: fixed;
@@ -127,7 +146,7 @@ h1 {
     cursor: pointer;
     font-size: 30px; 
     color: black; 
-    background-color: #5a498f; 
+    background-color: rgba(145, 127, 193, 0.5);; 
     border: none;
     padding: 10px; 
     border-radius: 50%; 
@@ -142,12 +161,43 @@ h1 {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1068px) {
     .image-slider {
         size: 100%; 
     }
     .image-holder img.active {
         size: 100%; 
+    }
+    .title-badge {
+        font-size: 30px; /* Smaller font size for smaller screens */
+        letter-spacing: 9px; /* Reduce letter spacing for smaller screens if needed */
+        top: 60px;
+        font-weight: 700;
+        left: 30px;
+        padding: 5px; /* Adjust padding as necessary */
+        transform: scaleY(0,5); /* Reset the stretching effect if necessary */
+    }
+
+    .left-arrow, .right-arrow {
+        /* Smaller screens might need different positioning */
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .left-arrow {
+        left: 30%; /* Closer to the edge for smaller screens */
+    }
+
+    .right-arrow {
+        right: 30%; /* Closer to the edge for smaller screens */
+    }
+    .bg {
+        background: url('images/front-page.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: contain;
+        height: 100vh;
     }
 }
 
@@ -595,3 +645,48 @@ label, input, textarea {
     color: #fff; 
   }
   
+
+  .submit-button {
+    background-color: #917fc1; /* Replace with actual color code of other buttons */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+submit-button:hover {
+    background-color: #5a498f; /* A darker variant for hover state */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #917fc1; 
+    font-family: 'Big Shoulders Display', bold;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer-text {
+    text-align: center;
+    flex: 1; /* This makes the .footer-text expand the entire width of the .footer-content container */
+}
+
+@media screen and (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: center; /* This will center the .footer-text in the container for widths of 768px and above */
+    }
+}
+
+.info-box3 h4 {
+    margin-bottom: 30px; /* Adjust the value as needed */
+}

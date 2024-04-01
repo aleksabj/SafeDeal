@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset = "UTF-8">
     <title>SafeDeal</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 
 </head>
 <body>
+    <!-- <div class="title-badge">
+        <p>CONECTING TO </p> 
+        <p>SECURE DEALS</p>
+    </div> -->
     <div class="fixed-buttons">
         <a href="#home" class="fixed-button-left" >Home</a>
         <a href="#about" class="fixed-button-left" style="bottom: 30px">About Us</a> <!-- Add an additional link as needed -->
@@ -23,9 +30,9 @@
         <div class="image-slider">
             <button class="slide-arrow left-arrow">❮</button>
             <div class="image-holder">
-                <img src="images/image2.jpg" alt="Image 1">
-                <img src="images/image1.jpg" alt="Image 2">
-                <img src="images/image3.jpg" alt="Image 3">
+                <img src="images/image2.jpeg" alt="Image 1">
+                <img src="images/image1.jpeg" alt="Image 2">
+                <img src="images/image3.jpeg" alt="Image 3">
             </div>
             <button class="slide-arrow right-arrow">❯</button>
         </div>
@@ -157,33 +164,41 @@
             <!-- Info Box 1 -->
             <div class="info-box3">
                 <p>If you have any questions or suggestions, feel free to contact us any time!</p>
-                <p>Telephone:</p>
-                <p>Our office is located at [address]</p>
+                <p>Telephone: +420678239517</p>
+                <p>Our office is located in Prague, Cezch republic </p>
             </div>
 
             <!-- Info Box 2 (Email Form) -->
             <div class="info-box3">
                 <h4>To contact us by e-mail, please fill in the form below:</h4>
-                <div class="outer-box2">
-                    <div class="info-column2">
-                        <label for="email">Your e-mail:</label>
-                        <input type="email" id="email" name="email" placeholder="Your email address" required>
-                        <label for="theme">Theme:</label>
-                        <input type="text" id="theme" name="theme" placeholder="Subject of your message" required>
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" placeholder="Write your message here" rows="6" required></textarea>
-                        <button type="submit" class="button">Send Message</button>
-                    </div>
-                </div> 
+                <form action="sendmail.php" method="post"> <!-- Removed the erroneous closing form tag from here -->
+                    <div class="outer-box2">
+                        <div class="info-column2">
+                            <label for="email">Your e-mail:</label>
+                            <input type="email" id="email" name="email" placeholder="Your email address" required>
+                            <label for="theme">Theme:</label>
+                            <input type="text" id="theme" name="theme" placeholder="Subject of your message" required>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" placeholder="Write your message here" rows="6" required></textarea>
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </div>
+                    </div> 
+                </form>
             </div>
-        </div>
     </div>
+</div>
     <img src="images/lastimage.jpg" alt="Descriptive Alt Text" class="contact-image">
 </div>
 
 
-<a href="thank_you.html">Preview the Thank You page(this page will appear when thr user send the message)</a>
-
+<footer>
+    <div class="footer-content">
+        <div class="footer-text">
+            <p>SafeDeal Connect</p>
+            <p>© 2024 SafeDeal Connect. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
