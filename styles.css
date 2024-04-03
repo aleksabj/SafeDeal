@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;700&family=Sofia+Sans+Extra+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+
 body, html {
     height: 100%;
     margin: 0;
@@ -28,7 +30,18 @@ body, html {
 }
 
 
-h2 {
+.titles {
+    font-family: 'Six Caps', sans-serif;
+    font-size: 95px;
+    letter-spacing: 2px;
+    color: #917fc1;
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    text-align: center;
+    font-weight: 900;
+
+}
+.titles1 {
     font-family: 'Six Caps', sans-serif;
     font-size: 55px;
     letter-spacing: 2px;
@@ -36,8 +49,9 @@ h2 {
     margin-top: 10px; 
     margin-bottom: 10px; 
     text-align: center;
-
+    font-weight: 900;
 }
+
 
 h1 {
     font-family: 'Big Shoulders Display', bold;
@@ -689,4 +703,9 @@ footer {
 
 .info-box3 h4 {
     margin-bottom: 30px; /* Adjust the value as needed */
+}
+
+
+.features-list li a {
+    color: #ffffff; /* Adjust the color code to white or any other color you prefer */
 }
