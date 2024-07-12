@@ -1,4 +1,3 @@
-```markdown
 # SafeDeal Connect
 
 Welcome to SafeDeal Connect, a secure and convenient online marketplace designed to transform your buying and selling experience. Our platform is built with HTML, CSS, JavaScript, and PHP, and incorporates external resources like Bootstrap and Google Fonts for a cohesive and modern user interface.
